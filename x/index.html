@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <div class="left">
+                    <li><a href="#icon"><img src="./src/icon.png" height="40"></a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </div>
+                <div class="right">
+                    <li><a href="#contact">Contact Me</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="icon" class="section">
+        <h1>Your Name</h1>
+        <p>Aspiring Cybersecurity Professional</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <p>List your skills here...</p>
+    </section>
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p>Explore my work below:</p>
+        
+        <!-- Filter Buttons -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('nature')">Nature</button>
+            <button class="btn" onclick="filterSelection('cars')">Cars</button>
+            <button class="btn" onclick="filterSelection('people')">People</button>
+        </div>
+    
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+            <div class="column nature">
+                <div class="content">
+                    <img src="./src/car.jpg" alt="Mountains" style="width:100%">
+                    <h4>Mountains</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                    <img src="./src/car.jpg" alt="Lights" style="width:100%">
+                    <h4>Lights</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                    <img src="./src/car.jpg" alt="Car" style="width:100%">
+                    <h4>Retro</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                    <img src="./src/car.jpg" alt="Car" style="width:100%">
+                    <h4>Fast</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                    <img src="./src/car.jpg" alt="People" style="width:100%">
+                    <h4>Girl</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                    <img src="./src/car.jpg" alt="People" style="width:100%">
+                    <h4>Woman</h4>
+                    <p>Lorem ipsum dolor..</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <span id="year"></span> Ryan Jamilosa. All Rights Reserved. <script>document.getElementById('year').textContent = new Date().getFullYear();</script></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
