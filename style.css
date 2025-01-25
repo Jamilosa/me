@@ -1,0 +1,293 @@
+
+        @font-face {
+            font-family: 'UbuntuFont';
+            src: url(./src/font/UbuntuMono-R.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'UbuntuFont', monospace;
+            color: #94a3b8;
+        }
+
+        .circle { 
+            position: absolute; 
+            width: 200vh; 
+            height: 200vh; 
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(57,255,20,0) 70%); 
+            border-radius: 50%; 
+            pointer-events: none; 
+            transform: translate(-50%, -50%); 
+        }
+
+        body {
+            -webkit-user-select: none; /* Safari */ 
+            -moz-user-select: none; /* Firefox */ 
+            -ms-user-select: none; /* Internet Explorer/Edge */ 
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #333;
+        }
+        
+        h1, h3{
+            line-height: 2rem;
+        }
+        
+        .box-label {
+            line-height: 150%;
+        }
+        p {
+            line-height: 125%;
+        }
+        .container {
+            display: flex;
+            background-color: transparent;
+            flex-direction: column;
+        }
+
+        .contact-container{
+            padding-top: 10px;
+        }
+
+        .fixed-part {
+            background-color: transparent;
+            color: #94a3b8;
+            padding-top: 1rem;
+            padding-left: 1.4rem;
+            text-align: left;
+
+        }
+
+        .my-name-container {
+            display: inline-block;
+            position: relative;
+        }
+        .my-name {
+            color: #93a4b8;
+            padding-top: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            min-height: 1.5em
+        }
+        .cursor {
+            position: absolute;
+            bottom: 0;
+            height: 2rem;
+            background-color: #93a4b8;
+            width: 3px;
+            animation: blink 1.0s step-start infinite;
+        }
+        @keyframes blink {
+            50% {
+                background-color: transparent;
+            }
+        }
+
+
+
+
+
+
+        .certificate a {
+            text-decoration: none;
+        }
+
+
+
+        .scrollable-part {
+            background-color: transparent;
+            color: #94a3b8;
+            padding: .3rem;
+        }
+
+        .box {
+            padding: 1rem;
+            margin-bottom: .3rem;
+        }
+
+        .about-me {
+            height: auto; 
+            min-height: 98vh;
+
+        }
+        
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; 
+        }
+
+        .project-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: .5rem;
+            padding-top: .5rem;
+            background-color: transparent;
+            border-radius: 0.5rem;
+            
+        }
+
+        .project-item:hover{
+            background-color: rgba(211, 211, 211, 0.08);
+        }
+
+        .project-item:hover .project-img { 
+            border: 2px solid rgba(220, 220, 220, 0.4);; 
+        }
+
+        .project-item:hover h3 {
+            color: #B3CBD6;
+        } 
+
+        .project-img {
+            width: 190px;
+            height: 120px;
+            flex-shrink: 0;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            border: 2px solid #444;
+        }
+
+       
+        .project-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            color: #94a3b8;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .project-tags {
+            margin-top: 1rem; 
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 0.5rem; 
+        }
+
+        .project-tags h3 {
+            margin-top: 0.5em;
+            display: block;
+            flex: 1 100%;
+        }
+
+        .tag {
+            background-color: #444;
+            padding: 0.3rem 0.7rem;
+            border-radius: 0.5rem;
+            white-space: nowrap; 
+            cursor: default;
+            box-shadow: 2px 1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tag a {
+            text-decoration: none;
+            color: #B3CBD6;
+            font-size: 0.9rem;
+        }
+
+
+        /* Container for each category (header + tags) */
+        .category-container {
+            margin-left: 1rem; /* Indent the entire category block */
+        }
+
+        /* Container for tags to allow wrapping */
+        .category-container {
+            display: flex;
+            flex-wrap: wrap; /* Enable wrapping for tags */
+            gap: 0.5rem; /* Space between tags */
+        }
+
+    
+        .certificate {
+            margin-left: 1rem;
+        }
+
+        .certificate .courses {
+            line-height: 1.5;
+        }
+        .certificate-container {
+            margin-left: 2rem;
+        }
+
+        .certificate-date {
+            padding-top: 1rem;
+        }
+        
+
+        @media (min-width: 768px) {
+            body {
+                overflow: hidden;
+            }
+
+            .container {
+                flex-direction: row;
+                height: 100vh;
+            }
+
+            .contact-container{
+                padding-top: 60vh;
+            }
+
+            .fixed-part {
+                width: 45%;
+                height: 100vh;
+                padding-top: 1rem;
+                padding-left: 20vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            .scrollable-part {
+                margin-left: 45%;
+                width: 55%;
+                height: 100vh;
+                overflow-y: auto;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .fixed-part {
+                padding-top: 1rem;
+            }
+            .project-item {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center-align items for better layout */
+            }
+
+            .project-img {
+                margin-bottom: 0.2rem;
+                flex-shrink: 0;
+                border: 2px solid #444;
+                max-width: 400px;
+                max-height: 240px;
+                min-width: 40vh;
+                min-height: 20vh;
+            }
+
+            .project-details {
+                align-items: center; 
+                text-align: center;
+            }
+            
+            .project-description {
+                text-align: left;
+            }
+        }

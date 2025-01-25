@@ -1,0 +1,281 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #120f1f;
+  }
+  
+  .container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+
+
+
+  /* Left Panel */
+  .left-panel {
+    background-color: transparent;
+    width: 40%;
+    padding-top: 4rem;
+    padding-left: 10vh;
+    padding-right: 10px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-panel .left-panel-top {
+      flex-grow: 1; /* Pushes left-panel-bottom to the bottom*/
+  }
+  
+  .left-panel .left-panel-top .name {
+    color: antiquewhite;
+  }
+
+  .left-panel .left-panel-top .title {
+    color: antiquewhite;
+    font-size: 1.3rem;
+  }
+
+  .left-panel .left-panel-bottom {
+    margin-bottom: 9rem;  
+  }
+
+  .left-panel .left-panel-bottom .contact-container { }
+  .left-panel .left-panel-bottom .contact-container a { }
+  .left-panel .left-panel-bottom .contact-container a img { height: 25px; }
+
+  /* Right Panel */
+  .right-panel {
+    width: 60%;
+    overflow-y: auto;
+    padding-right: 1rem;
+  }
+
+  .right-panel section {
+    height: 100vh;
+    display: flex;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .right-panel .section .section-container {
+    background-color: blue;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .right-panel .section .section-container .section-title {
+    font-size: 1.8rem;
+    padding: 5px 0 5px 0;
+  }
+
+  
+  .right-panel .section .section-container .section-subtitle {
+    background-color: transparent;
+  }
+
+  .right-panel .section .section-container .section-content { }
+
+  .right-panel .section .section-container .section-content .paragraph {
+    font-size: 1rem;
+  }
+
+
+  /* About Section */
+  .right-panel #section1 .about-container { }
+  .right-panel #section1 .about-container .about-title { }
+  .right-panel #section1 .about-container .about-title p { }
+  .right-panel #section1 .about-container .about-content { }
+  .right-panel #section1 .about-container .about-content p { margin-bottom: 10px; }
+
+
+  /* Knowledge Section */
+  .right-panel #section2 .knowledge-container { }
+  .right-panel #section2 .knowledge-container .knowledge-title { }
+  .right-panel #section2 .knowledge-container .knowledge-title p { }
+  
+  .right-panel #section2 .knowledge-container .knowledge-content { }
+  .right-panel #section2 .knowledge-container .knowledge-category { 
+    background-color: purple;
+  }
+
+  .knowledge-category .section-subtitle { }
+
+  #sectopm2 .project-tag .domain { }
+  #sectopm2 .project-tag .concept { }
+  #sectopm2 .project-tag .tool { }
+
+
+  /* Completion Certificates */
+  #section3 .certificate-container { }
+
+  #section3 .certificate-container .certificate-title { }
+  #section3 .certificate-container .certificate-title p { }
+  
+  #section3 .certificate-container .certificate-content { }
+  #section3 .certificate-container .certificate-content { }
+  #section3 .certificate-container .certificate-content p { }
+
+  #section3 .certificate-content-date { margin: 10px 0 0 0 }
+  #section3 .certificate-name .courses ul { }
+  #section3 .certificate-name .courses li { 
+    list-style: square;
+    margin: 5px 0px 5px 2rem;
+    
+  }
+
+
+  /* Projects */
+  #section4 .project-container { }
+  #section4 .project-container .section-title { }
+  #section4 .project-container .project-content { 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #section4 .project-container .project-content .project-item { }
+  
+  #section4 .project-item .project-thumbnail { flex-shrink: 0; } 
+  #section4 .project-item .project-thumbnail img { 
+    width: 150px;
+    height: 90px; /* Preserve aspect ratio */
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+
+  #section4 .project-item {
+    display: flex; /* Maintain side-by-side layout */
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px;
+    background: red;
+    gap: 10px; /* Adds spacing between image and text */
+  }
+
+  #section4 .project-item .project-details { 
+    display: flex;
+    flex-direction: column; /* Stack title, description, and tags */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Keep items aligned to the top */
+    flex-grow: 1; /* Allow the text area to take up remaining space */
+  }
+  #section4 .project-item .project-details .project-title { 
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  #section4 .project-item .project-details .project-title p { }
+  #section4 .project-item .project-details .project-description { }
+  #section4 .project-item .project-details .project-description p { margin: 5px 0px 5px 0px; }
+
+/* Used on #Section2 and #Section4 */
+.project-tag {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap if needed */
+  align-items: flex-start;
+  margin: 0px 0 5px 0;
+  gap: 5px;
+}
+
+.project-tag .tag {
+  background-color: #3498db;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: inline-block; /* Ensure it respects max-width */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if needed */
+  text-align: center; /* Center align the text inside the tag */
+}
+
+  /* For Medium Screens */
+  @media screen and (max-width: 860px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left-panel {
+      width: 100%;
+      min-height: 30vh; /*for some reason 'auto' makes the left panel disappear*/
+      overflow-y: hidden;
+      position: relative;
+      padding: 10px 20px 0 20px;
+    }
+
+    .left-panel-bottom {
+      margin-bottom: 0;
+      text-align: left;
+    }
+    
+    .left-panel-top {
+      flex-grow: 0;
+    }
+    .right-panel {
+      width: 100%;
+      overflow: visible;
+    }
+  
+    .right-panel section {
+      height: auto;
+      padding-left: 5vh;
+    }
+
+    .about-container {
+      padding-top: 1rem;
+    }
+
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .section-container {
+      min-height: 100%;
+    }
+    .project-item {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align everything to the left */
+    }
+
+    .left-panel {
+       padding-left: 7px;
+    }
+
+    .right-panel {
+      padding-right: 5px;
+    }
+
+    .right-panel section {
+      padding-left: 7px;
+    }
+  
+    .project-item {
+      gap: 0.1rem;
+    }
+
+
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .section-subtitle {
+      font-size: 1.3rem;
+      margin: 0 0 10px 0;
+    }
+  }
