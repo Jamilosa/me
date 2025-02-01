@@ -87,9 +87,10 @@ body {
 }
 
 .left-panel .left-panel-top .name {
+
 }
 .left-panel .left-panel-top .title {
-  padding: 5px 0 20px 0px;
+  padding: 10px 0 15px 2px;
 }
 .left-panel .left-panel-top .subtitle {
   padding: 0 0 0 0px;
@@ -178,7 +179,8 @@ body {
 #section2 .project-tag .tool {
 }
 #section2 .project-tag .tag:hover {
-  color: rgba(124, 231, 165, 1);
+  /*color: rgba(124, 231, 165, 1); */
+  font-weight: bold;
 }
 
 /* Completion Certificates */
@@ -194,6 +196,7 @@ body {
 }
 #section3 .certificate-container .certificate-content {
 }
+
 #section3 .certificate-container .certificate-content p {
 }
 
@@ -208,8 +211,11 @@ body {
 }
 
 li:hover {
-  color: rgba(104, 211, 145, 1);
+  /* color: rgba(104, 211, 145, 1); */ 
+  font-weight: bold;
 }
+
+
 
 /* Projects */
 #section4 . {
@@ -246,12 +252,14 @@ li:hover {
 }
 
 #section4 .project-item:hover .project-title {
-  color: rgba(104, 211, 145, 1);
+  /*color: rgba(104, 211, 145, 1);*/
+  font-weight: bold;
+
 }
 
 #section4 .project-item:hover .tag {
-  color: rgba(124, 231, 165, 1);
-  background-color: rgba(104, 211, 145, 0.09);
+  /*color: rgba(124, 231, 165, 1);*/
+  font-weight: bold;
 }
 
 #section4 .project-item {
@@ -289,9 +297,9 @@ li:hover {
 }
 
 .project-tag .tag {
-  background-color: rgba(104, 211, 145, 0.12);
   border: 1px solid var(--tag-border-color);
-  color: rgba(104, 211, 145, 0.9);
+  color: var(--text-color);
+  background-color: transparent;  
   border-radius: 10px;
   text-decoration: none;
   padding: 5px 10px 5px 10px;
@@ -301,10 +309,13 @@ li:hover {
   text-align: center; /* Center align the text inside the tag */
 }
 
+
+
 /* xFont size */
 .left-panel .name {
   font-size: 2rem;
   font-weight: 900;
+  color: #94A3B8;
 }
 
 .left-panel .title {
